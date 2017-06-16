@@ -52,13 +52,9 @@ ActiveRecord::Schema.define(version: 20170522132005) do
     t.string   "name"
     t.string   "address"
     t.string   "contact"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "avatar"
-    t.string   "pic_file_name"
-    t.string   "pic_content_type"
-    t.integer  "pic_file_size"
-    t.datetime "pic_updated_at"
   end
 
   create_table "laptops", force: :cascade do |t|
