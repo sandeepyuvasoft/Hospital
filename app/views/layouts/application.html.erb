@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hospital</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+         <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+              <% if user_signed_in? %>
+     Signed in as <%= current_user.email %>
+    <%= link_to "Logout", destroy_user_session_path, :method => :delete %> |
+    <%= link_to "Edit profile", edit_user_registration_path %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or 
+		<%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+
+
+     <div class="container">
+  <%= nav_bar fixed: :top, brand: "Fashionable Clicheizr 2.0", responsive: true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_divider %>
+        <%= drop_down "Products" do %>
+            <%= menu_item "Things you can't afford", "#" %>
+            <%= menu_item "Things that won't suit you anyway", "#" %>
+            <%= menu_item "Things you're not even cool enough to buy anyway", "#" %>
+        <% end %>
+        <%= menu_item "About Us", "#" %>
+        <%= menu_item "Contact", "#" %>
+    <% end %>
+    <%= menu_group pull: :right do %>
+    <% end %>
+<% end %>
+    <%= yield %>
+  </div>
+  </body>
+</html>

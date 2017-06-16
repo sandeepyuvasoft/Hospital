@@ -1,0 +1,24 @@
+<h3><%=link_to "Add Patient" ,new_patient_path%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<h3><%=link_to "Back" ,:back%></h3>
+<table border="" align="center">
+ <tr>
+ 	<th>Name</th>
+ 	<th>Address</th>
+ 	<th>image</th>
+ </tr>
+ <tr>
+ 	<% @patient.each do |patient|%>
+ 	<td>
+ 	<%=patient.name%>
+ 	</td>
+ 	<td>
+ 	<%=patient.address%>
+ 	</td>
+ 	<td>
+ 	<%=image_tag patient.pic.url%>
+ 	</td>
+ </tr>
+ <%end%>
+</table>
+

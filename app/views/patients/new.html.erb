@@ -1,0 +1,16 @@
+<%=link_to "Back" ,:back%>
+<%=link_to "Home" ,:root%>
+<%= form_for @patient do |patient|%>
+<%= patient.label :name%>
+<%= patient.text_field :name%><br><br>
+<%= patient.label :age%>
+<%= patient.text_field :age%><br><br>
+<%= patient.label :address%>
+<%= patient.text_field :address%><br><br>
+<%= patient.label :contact%>
+<%= patient.text_field :contact%><br><br>
+<%= patient.label :pic%>
+<%= patient.file_field :pic%><br><br>
+
+<%=patient.submit "Submit"%>
+<%end%>

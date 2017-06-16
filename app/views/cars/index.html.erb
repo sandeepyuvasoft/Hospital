@@ -1,0 +1,17 @@
+<h3><%=link_to "Car" ,new_car_path%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<h3><%=link_to "Back" ,:back%></h3>
+<table border="" align="center">
+ <tr>
+ 	<th>Name</th>
+ 	<th>image</th>
+ </tr>
+ <tr>
+ 	<% @cars.each do |car|%>
+ 		<td><%=car.name%></td>
+ 		<% car.pic.each do |pic|%>
+ 			<td><%=image_tag(pic.url(:thumb))%></td>
+		<%end%>
+ </tr>
+ <%end%>
+</table>

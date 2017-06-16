@@ -1,0 +1,22 @@
+<h3><%=link_to "Add Article" ,new_article_path%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<h3><%=link_to "Back" ,:back%></h3>
+<table border="" align="center">
+ <tr>
+ 	<th>Title</th>
+ 	<th>Image</th>
+ </tr>
+ <tr>
+ 	<% @article.each do |article|%>
+ 	<td>
+ 	<%=article.title%>
+ 	</td>
+ 	<td>
+ 	<%=image_tag(article.avatar)%>
+ 
+ 	</td>
+ </tr>
+ <%end%>
+</table>
+
+

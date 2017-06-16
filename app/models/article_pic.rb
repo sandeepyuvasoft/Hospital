@@ -1,0 +1,3 @@
+class ArticlePic < ApplicationRecord
+	
+end

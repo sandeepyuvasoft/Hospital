@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<p>hi sandeep</p>
+
+</body>
+</html>
+<h3><%=link_to "Back" ,:back%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<%= form_for @doctor,html:{multipart: true} do |doctor|%>
+<%= doctor.label :name%>
+<%= doctor.text_field :name%><br><br>
+<%= doctor.label :address%>
+<%= doctor.cktext_area :address%><br><br>
+<%= doctor.label :contact%>
+<%= doctor.text_field :contact%><br><br>
+<%= doctor.label :pic%>
+<%= doctor.file_field :pic%><br><br>
+
+
+<%=doctor.submit "Submit"%>
+<%end%>

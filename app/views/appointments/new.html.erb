@@ -1,0 +1,12 @@
+<h3><%=link_to "Back" ,:back%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<%= form_for @appointment do |appointment|%>
+<%= appointment.label :doctor_id%>
+<%= appointment.text_field :doctor_id%><br><br>
+<%= appointment.label :patient_id%>
+<%= appointment.text_field :patient_id%><br><br>
+<%=appointment.label :date%>
+<%= appointment.text_field :date%><br><br>
+
+<%=appointment.submit "Submit"%>
+<%end%>

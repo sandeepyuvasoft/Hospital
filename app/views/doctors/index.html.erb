@@ -1,0 +1,19 @@
+<h3><%=link_to "Add Doctor" ,new_doctor_path%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<h3><%=link_to "Back" ,:back%></h3>
+<table border="" align="center">
+ <tr>
+ 	<th>Name</th>
+ 	<th>Address</th>
+ </tr>
+ <tr>
+ 	<% @doctor.each do |doctor|%>
+ 	<td>
+ 	<%=doctor.name%>
+ 	</td>
+ 	<td>
+ 	<%=raw(doctor.address)%>
+ 	</td>
+ </tr>
+ <%end%>
+</table>

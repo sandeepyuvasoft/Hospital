@@ -1,0 +1,13 @@
+<h3><%=link_to "Back" ,:back%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<%= form_for @car, html: { multipart: true }   do |car|%>
+	<%= car.label :name%>
+	<%= car.text_field :name%><br><br>
+	<%= car.label :pic%>
+	<%= car.file_field :pic, multiple: true%>
+	<%#= car.file_field :pic%>
+	<%#= car.file_field "pic[]",type: :file, multiple: true%><br><br>
+	<%=car.submit "Submit"%>
+<%end%>
+
+ 

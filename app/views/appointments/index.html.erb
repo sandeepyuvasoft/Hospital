@@ -1,0 +1,28 @@
+<h3><%=link_to "Add Appointment" ,new_appointment_path%></h3>
+<h3><%=link_to "Home" ,:root%></h3>
+<h3><%=link_to "Back" ,:back%></h3>
+<table border="" align="center">
+ <tr>
+ 	<th>Doctor Name</th>
+ 	<th>Patient Name</th>
+ 	<th>Appointment Date</th>
+ </tr>
+ <tr>
+ 	<% @appointments.each do |appointment|%>
+ 	<td>
+ 	<%=appointment.doctor.name%>
+ 	</td>
+	<td>
+ 	<%=appointment.patient.name%>
+ 	</td>
+ 	<td>
+ 	<%=appointment.date%>
+ 	</td>
+ </tr>
+ <%end%>
+</table>
+<ol type="a">
+	<li>c</li>
+	<li>c++</li>
+	<li>java</li>
+</ol>
