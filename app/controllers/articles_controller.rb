@@ -14,6 +14,9 @@ class ArticlesController < ApplicationController
       render 'new'
     end
   end
+  def update
+    
+  end
   private
   def article_params
   	#params.require(:article).permit!
